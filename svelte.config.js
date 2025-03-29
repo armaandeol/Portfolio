@@ -1,4 +1,4 @@
-import vercel from '@sveltejs/adapter-vercel'; // Import the Vercel adapter
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -9,7 +9,7 @@ const config = {
 
 	kit: {
 		// Use the Vercel adapter for deployment
-		adapter: vercel(),
+		adapter: adapter(),
 
 		// Additional configuration (optional)
 		prerender: {

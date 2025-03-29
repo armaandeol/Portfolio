@@ -1,6 +1,8 @@
 import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./ssr.js";
+import { a as afterUpdate } from "./ssr2.js";
 let base = "";
 let assets = base;
+const app_dir = "_app";
 const initial = { base, assets };
 function override(paths) {
   base = paths.base;
@@ -23,7 +25,11 @@ function set_public_env(environment) {
 function set_safe_public_env(environment) {
   safe_public_env = environment;
 }
-function afterUpdate() {
+let read_implementation = null;
+function set_read_implementation(fn) {
+  read_implementation = fn;
+}
+function set_manifest(_) {
 }
 let prerendering = false;
 function set_building() {
@@ -97,18 +103,14 @@ const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   } while (!$$settled);
   return $$rendered;
 });
-function set_read_implementation(fn) {
-}
-function set_manifest(_) {
-}
 const options = {
-  app_dir: "_app",
   app_template_contains_nonce: false,
   csp: { "mode": "auto", "directives": { "upgrade-insecure-requests": false, "block-all-mixed-content": false }, "reportOnly": { "upgrade-insecure-requests": false, "block-all-mixed-content": false } },
   csrf_check_origin: true,
   embedded: false,
   env_public_prefix: "PUBLIC_",
   env_private_prefix: "",
+  hash_routing: false,
   hooks: null,
   // added lazily, via `get_hooks`
   preload_strategy: "modulepreload",
@@ -187,27 +189,42 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "l90979"
+  version_hash: "kh6axe"
 };
 async function get_hooks() {
-  return {};
+  let handle;
+  let handleFetch;
+  let handleError;
+  let init;
+  let reroute;
+  let transport;
+  return {
+    handle,
+    handleFetch,
+    handleError,
+    init,
+    reroute,
+    transport
+  };
 }
 export {
   assets as a,
   base as b,
-  options as c,
-  set_private_env as d,
-  prerendering as e,
-  set_public_env as f,
+  app_dir as c,
+  read_implementation as d,
+  options as e,
+  set_private_env as f,
   get_hooks as g,
-  set_safe_public_env as h,
-  set_assets as i,
-  set_building as j,
-  set_manifest as k,
-  set_prerendering as l,
-  set_read_implementation as m,
+  prerendering as h,
+  set_public_env as i,
+  set_safe_public_env as j,
+  set_read_implementation as k,
+  set_assets as l,
+  set_building as m,
+  set_manifest as n,
   override as o,
   public_env as p,
+  set_prerendering as q,
   reset as r,
   safe_public_env as s
 };

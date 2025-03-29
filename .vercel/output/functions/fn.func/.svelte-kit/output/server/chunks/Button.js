@@ -1,4 +1,4 @@
-import { c as create_ssr_component, k as compute_rest_props, l as spread, p as escape_object, o as escape_attribute_value, e as escape, v as validate_component, a as add_attribute } from "./ssr.js";
+import { c as create_ssr_component, k as compute_rest_props, l as spread, e as escape, p as escape_object, o as escape_attribute_value, v as validate_component, a as add_attribute } from "./ssr.js";
 import clsx from "clsx";
 import { asLinkAttrs } from "@prismicio/client";
 const void_element_names = /^(?:area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)$/;

@@ -1,4 +1,4 @@
-import { n as noop, f as set_current_component, r as run_all, h as current_component, i as is_function, j as identity, c as create_ssr_component, a as add_attribute, k as compute_rest_props, l as spread, o as escape_attribute_value, p as escape_object, v as validate_component, b as each, e as escape$1, m as missing_component, q as null_to_empty, t as onDestroy, s as setContext, g as getContext, d as subscribe, u as get_current_component, w as is_promise, x as onMount } from "./ssr.js";
+import { n as noop, f as set_current_component, h as current_component, r as run_all, i as is_function, j as identity, c as create_ssr_component, a as add_attribute, k as compute_rest_props, l as spread, o as escape_attribute_value, p as escape_object, v as validate_component, b as each, e as escape$1, m as missing_component, q as null_to_empty, t as onDestroy, s as setContext, g as getContext, d as subscribe, u as get_current_component, w as is_promise, x as onMount } from "./ssr.js";
 import { P as PrismicLink, i as is_void, B as Bounded, a as Button, A as Arrow } from "./Button.js";
 import clsx from "clsx";
 import { asTree } from "@prismicio/richtext";
@@ -41337,6 +41337,7 @@ new Matrix4();
 new Matrix4();
 new Mesh();
 `
+	  #include <common>
     ${ShaderChunk.logdepthbuf_pars_vertex}
     ${ShaderChunk.fog_pars_vertex}
 

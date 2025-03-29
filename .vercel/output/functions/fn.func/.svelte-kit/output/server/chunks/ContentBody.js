@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, e as escape, b as each } from "./ssr.js";
+import { c as create_ssr_component, v as validate_component, b as each, e as escape } from "./ssr.js";
 import { H as Heading, S as SliceZone, c as components } from "./index2.js";
 import { B as Bounded } from "./Button.js";
 const ContentBody = create_ssr_component(($$result, $$props, $$bindings, slots) => {

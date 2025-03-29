@@ -10,21 +10,10 @@ const enableAutoPreviews = (config) => {
   }
 };
 const repositoryName$1 = "armaan-portfolio-website";
-const adapter = "@slicemachine/adapter-sveltekit";
-const libraries = [
-  "./src/lib/slices"
-];
-const localSliceSimulatorURL = "http://localhost:5173/slice-simulator";
-const apiEndpoint = "";
 const sm = {
-  repositoryName: repositoryName$1,
-  adapter,
-  libraries,
-  localSliceSimulatorURL,
-  apiEndpoint
+  repositoryName: repositoryName$1
 };
-var define_import_meta_env_default = { BASE_URL: "/", MODE: "production", DEV: false, PROD: true, SSR: true };
-const repositoryName = define_import_meta_env_default.VITE_PRISMIC_ENVIRONMENT || sm.repositoryName;
+const repositoryName = sm.repositoryName;
 const routes = [
   { type: "page", path: "/", uid: "home" },
   { type: "page", path: "/:uid" },
