@@ -1,0 +1,163 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "/slice-simulator",
+			"dest": "/slice-simulator/"
+		},
+		{
+			"src": "/slice-simulator/",
+			"status": 308,
+			"headers": {
+				"Location": "/slice-simulator"
+			}
+		},
+		{
+			"src": "/blog/visualizing-history-a-timeline-of-shared-borders",
+			"dest": "/blog/visualizing-history-a-timeline-of-shared-borders/"
+		},
+		{
+			"src": "/blog/visualizing-history-a-timeline-of-shared-borders/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/visualizing-history-a-timeline-of-shared-borders"
+			}
+		},
+		{
+			"src": "/blog/predicting-penalty-kicks-with-ai-a-dive-into-the-b",
+			"dest": "/blog/predicting-penalty-kicks-with-ai-a-dive-into-the-b/"
+		},
+		{
+			"src": "/blog/predicting-penalty-kicks-with-ai-a-dive-into-the-b/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog/predicting-penalty-kicks-with-ai-a-dive-into-the-b"
+			}
+		},
+		{
+			"src": "/project/daily-nodes",
+			"dest": "/project/daily-nodes/"
+		},
+		{
+			"src": "/project/daily-nodes/",
+			"status": 308,
+			"headers": {
+				"Location": "/project/daily-nodes"
+			}
+		},
+		{
+			"src": "/project/oculoo",
+			"dest": "/project/oculoo/"
+		},
+		{
+			"src": "/project/oculoo/",
+			"status": 308,
+			"headers": {
+				"Location": "/project/oculoo"
+			}
+		},
+		{
+			"src": "/about",
+			"dest": "/about/"
+		},
+		{
+			"src": "/about/",
+			"status": 308,
+			"headers": {
+				"Location": "/about"
+			}
+		},
+		{
+			"src": "/home",
+			"dest": "/home/"
+		},
+		{
+			"src": "/home/",
+			"status": 308,
+			"headers": {
+				"Location": "/home"
+			}
+		},
+		{
+			"src": "/projects",
+			"dest": "/projects/"
+		},
+		{
+			"src": "/projects/",
+			"status": 308,
+			"headers": {
+				"Location": "/projects"
+			}
+		},
+		{
+			"src": "/blog",
+			"dest": "/blog/"
+		},
+		{
+			"src": "/blog/",
+			"status": 308,
+			"headers": {
+				"Location": "/blog"
+			}
+		},
+		{
+			"src": "/contact",
+			"dest": "/contact/"
+		},
+		{
+			"src": "/contact/",
+			"status": 308,
+			"headers": {
+				"Location": "/contact"
+			}
+		},
+		{
+			"src": "/_app/immutable/.+",
+			"headers": {
+				"cache-control": "public, immutable, max-age=31536000"
+			}
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "/.*",
+			"dest": "/fn"
+		}
+	],
+	"overrides": {
+		"slice-simulator.html": {
+			"path": "slice-simulator"
+		},
+		"index.html": {
+			"path": ""
+		},
+		"blog/visualizing-history-a-timeline-of-shared-borders.html": {
+			"path": "blog/visualizing-history-a-timeline-of-shared-borders"
+		},
+		"blog/predicting-penalty-kicks-with-ai-a-dive-into-the-b.html": {
+			"path": "blog/predicting-penalty-kicks-with-ai-a-dive-into-the-b"
+		},
+		"project/daily-nodes.html": {
+			"path": "project/daily-nodes"
+		},
+		"project/oculoo.html": {
+			"path": "project/oculoo"
+		},
+		"about.html": {
+			"path": "about"
+		},
+		"home.html": {
+			"path": "home"
+		},
+		"projects.html": {
+			"path": "projects"
+		},
+		"blog.html": {
+			"path": "blog"
+		},
+		"contact.html": {
+			"path": "contact"
+		}
+	}
+}
