@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "wonderful",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "ground",
+				"type": "Text"
+			},
+			"message": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute elit excepteur laborum culpa sunt exercitation aliqua occaecat laborum culpa. Dolore ex adipisicing dolor sint adipisicing."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
